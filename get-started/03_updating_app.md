@@ -92,15 +92,21 @@ much easier than having to look up the container ID and remove it.
 
 ![Docker Dashboard - removing a container](images/dashboard-removing-container.png)
 
-### Start the updated app container
+### Build an start the updated app container
 
-1. Now, start your updated app.
+1. Let's build our updated version of the image, using the same command we used before.
+
+    ```console
+    $ docker build -t getting-started .
+    ```
+
+2. Now, start your updated app.
 
     ```console
     $ docker run -dp 3000:3000 getting-started
     ```
 
-2. Refresh your browser on [http://localhost:3000](http://localhost:3000) and you should see your updated help text!
+3. Refresh your browser on [http://localhost:3000](http://localhost:3000) and you should see your updated help text!
 
 ![Updated application with updated empty text](images/todo-list-updated-empty-text.png){: style="width:55%" }
 {: .text-center }
